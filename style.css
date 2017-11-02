@@ -1,0 +1,101 @@
+main {
+	max-width: 900px;
+	margin: 0 auto;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+.exercise-block {
+	padding: 10px;
+	border-radius: 5px;
+	transition: background-color 1s;
+	background-color: white;
+	margin-bottom: 10px;
+}
+
+.exercise-block.win {
+	background-color: #78de4e;
+}
+
+.exercise-row {
+	display: flex;
+}
+
+.exercise-row pre {
+	flex: 1 1 auto;
+	margin: 10px;
+	background: #23241f;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+span.edit {
+	padding: 3px 5px;
+	background: rgba(255,255,255,0.1);
+	border-radius: 3px;
+}
+
+.exercise-row span[contenteditable] {
+	
+}
+
+.exercise-result {
+	padding: 20px;
+}
+
+@keyframes heartbeat {
+	0% {
+		color: white;
+	}
+
+	50% {
+		color: tomato;
+	}
+
+	100% {
+		color: white;
+	}
+}
+
+.heart {
+	animation-name: heartbeat;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-play-state: running;
+	/*transform: rotate(40deg);
+	color: red;*/
+	font-size: 1.2em;
+}
+
+.show * {
+	display: block;
+	padding: 5px;
+	border: 1px solid currentColor;
+}
+
+.show article {
+	color: aqua;
+}
+.show article:before {
+	content: 'article';
+}
+
+.show em {
+	color: bisque;
+}
+.show em:before {
+	content: 'em';
+}
+
+.show p {
+	color: tomato;
+}
+.show p:before {
+	content: 'p';
+}
+
+.show strong {
+	color: red;
+}
+.show strong:before {
+	content: 'strong';
+}
