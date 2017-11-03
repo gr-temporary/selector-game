@@ -54,7 +54,7 @@
 
 	function applyStyle(id, selector) {
 		var style = document.getElementById("style-" + id);
-		style.innerHTML = "#excercise-" + id + " " + selector + " { color: red; }";
+		style.innerHTML = "#result-" + id + " " + selector + " { color: red; }";
 	}
 
 	function updateSelector(event) {
