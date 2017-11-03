@@ -1,3 +1,8 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
 main {
 	max-width: 900px;
 	margin: 0 auto;
@@ -94,4 +99,15 @@ span.edit {
 }
 .show strong:before {
 	content: 'strong';
+}
+
+@media (max-width: 600px) {
+	main {
+		width: 100%;
+		margin: 0;
+		paddin: 10px;
+	}
+	.exercise-row {
+		flex-direction: column;
+	}
 }

@@ -10,6 +10,15 @@
 		addExcersize(list.children[i], i);
 	}
 
+	document.getElementById("reset").addEventListener("click", reset);
+
+	function reset() {
+		if(confirm("Вы действительно хотите сбросить результат?")) {
+			delete localStorage["selectors"];
+			location.reload();
+		}
+	}
+
 	function addExcersize(excercise, id) {
 		var block = template.cloneNode(true);
 		block.id = "excercise-" + id;
