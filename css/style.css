@@ -34,10 +34,6 @@ span.edit {
 	border-radius: 3px;
 }
 
-.exercise-row span[contenteditable] {
-	
-}
-
 .exercise-result {
 	padding: 20px;
 }

@@ -45,11 +45,16 @@
 		if(saved[i]) {
 			var s = saved[i].selector;
 			inputs[i].innerText = s;
-			document.querySelector("#style-" + i).innerHTML = s + " { color: red; }";
+			applyStyle(i, s);
 			if(saved[i].win) {
 				document.querySelector("#excercise-" + i).classList.add("win");
 			}
 		}
+	}
+
+	function applyStyle(id, selector) {
+		var style = document.getElementById("style-" + id);
+		style.innerHTML = "#excercise-" + id + " " + selector + " { color: red; }";
 	}
 
 	function updateSelector(event) {
@@ -60,14 +65,13 @@
 			return;
 		}
 		var result = document.getElementById("result-" + id);
-		var style = document.getElementById("style-" + id);
 		try {
 			var elements = result.querySelectorAll(selector);
 		} catch(e) {
 			return;
 		}
 		if(elements.length) {
-			style.innerHTML = selector + " { color: red; }";
+			applyStyle(id, selector);
 			var win = true;
 			for(var i=0; i<elements.length; i++) {
 				if(elements[i].innerText.trim() != "♥") {
