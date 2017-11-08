@@ -9,6 +9,10 @@ main {
 	font-family: Helvetica, Arial, sans-serif;
 }
 
+.intro {
+	padding: 0 10px;
+}
+
 .exercise-block {
 	padding: 10px;
 	border-radius: 5px;
@@ -27,10 +31,19 @@ main {
 
 .exercise-row pre {
 	flex: 1 1 auto;
-	margin: 10px;
+	margin: 5px;
 	background: #23241f;
 	padding: 10px;
 	border-radius: 5px;
+	position: relative;
+}
+
+.exercise-row pre:first-child {
+	margin-left: 0;
+}
+
+.exercise-row pre:last-child {
+	margin-right: 0;
 }
 
 span.edit {
@@ -39,8 +52,53 @@ span.edit {
 	border-radius: 3px;
 }
 
+.lang-title {
+	color: white;
+	opacity: 0.8;
+	font-family: Helvetica, Arial, sans-serif;
+	display: inline-block;
+	margin-bottom: -1em;
+}
+
+.css-code:before {
+	display: block;
+	position: absolute;
+	color: white;
+	opacity: 0.2;
+	top: 0.3em;
+	left: 0.5em;
+	content: "CSS";
+}
+
+.html-code:before {
+	display: block;
+	position: absolute;
+	color: white;
+	opacity: 0.2;
+	top: 0.3em;
+	left: 0.5em;
+	content: "HTML";
+}
+
+.exercise-result:before {
+	display: block;
+	position: absolute;
+	color: black;
+	opacity: 0.2;
+	top: 0.2em;
+	left: 0.2em;
+	/*font-family: monospace;*/
+	font-size: 0.8em;
+	content: "Результат";
+}
+
+
 .exercise-result {
 	padding: 20px;
+	border: 1px solid rgba(0,0,0,0.2);
+	border-radius: 5px;
+	background: rgba(255,255,255,0.2);
+	position: relative;
 }
 
 @keyframes heartbeat {

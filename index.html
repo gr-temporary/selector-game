@@ -4,32 +4,34 @@
 	<title>Игра с селекторами ♥ </title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/monokai-sublime.css">
+	<link rel="stylesheet" type="text/css" href="themes/monokai-sublime.css">
 </head>
 <body>
 	<main>
-		<h1>Задание на селекторы</h1>
-		<p>
-			Напишите селектор, который будет выбирать <strong>только</strong> элементы, содержащие в себе сердечко (♥).
-		</p>
-		<p>
-			Правильность автоматически проверяется по мере ввода селектора. Все результаты сохраняются, так что не бойтесь закрыть или обновить страницу.
-		</p>
-		<p>
-			Если вы хотите попробовать ещё раз заново - то для этого есть специальная кнопка:
-			<button id="reset">Сбросить результаты</button>
-		</p>
+		<section class="intro">
+			<h1>Задание на селекторы</h1>
+			<p>
+				Напишите селектор, который будет выбирать <strong>только</strong> элементы, содержащие в себе сердечко (♥).
+			</p>
+			<p>
+				Правильность автоматически проверяется по мере ввода селектора. Все результаты сохраняются, так что не бойтесь закрыть или обновить страницу.
+			</p>
+			<p>
+				Если вы хотите попробовать ещё раз заново - то для этого есть специальная кнопка:
+				<button id="reset">Сбросить результаты</button>
+			</p>
+		</section>
 		<div class="exercise-block" id="excercise-template">
 			<h2></h2>
 			<div class="exercise-row">
-				<pre>
+				<pre class="css-code">
 <code class="css">
 <span class="edit"><span contenteditable>___</span></span>: {
 	color: red;
 }
 </code>
 				</pre>
-				<pre>
+				<pre class="html-code">
 <code class="html"></code>
 				</pre>
 			</div>
@@ -70,12 +72,7 @@
 </ul>
 <ol>
 	<li class="oak">~</li>
-	<li>
-		<ul>
-			<li>~</li>
-			<li class="oak"> ♥ </li>
-		</ul>
-	</li>
+	<li>~</li>
 </ol>
 </div>
 
@@ -84,7 +81,9 @@
 	<em> ♥ </em>
 </div>
 <div>
-	<strong>~<em> ♥ </em>~</strong>
+	<strong>
+		~ <em> ♥ </em> ~
+	</strong>
 </div>
 <p>
 	<em>~</em>
@@ -92,16 +91,56 @@
 <em>~</em>
 </div>
 
+
+<div title="Дочернесть">
+<p>
+	<em> ♥ </em>
+</p>
+<p>
+	<strong>
+		<em> ~ </em>
+	</strong>
+</p>
+</div>
+
+<div title="Комбинирование">
+<p>
+	<em class="birch"> ~ </em>
+</p>
+<em class="oak"> ~ </em>
+<p>
+	<em class="oak"> ♥ </em>
+</p>
+<p>
+	<strong class="oak"> ~ </strong>
+</p>
+<p>
+	<em class="oak"> ♥ </em>
+</p>
+</div>
+
 <div title="Универсальность">
+<em> ♥ </em>
+<strong> ♥ </strong>
+<span> ♥ </span>
+</div>
+
+<div title="Универсальность + вложенность">
 <p>
-	~<em> ♥ </em>~
+	~ <em> ♥ </em> ~
 </p>
 <p>
-	~<strong> ♥ </strong>~
+	~ <strong> ♥ </strong> ~
 </p>
 <p>
-	~<span> ♥ </span>~
+	~ <span> ♥ </span> ~
 </p>
+</div>
+
+<div title="Запятая">
+<em class="oak"> ♥ </em> 
+<em class="fin"> ~ </em> 
+<em class="birch"> ♥ </em>
 </div>
 
 <div title="Отрицание">
@@ -110,6 +149,28 @@
 	<li class="oak">~</li>
 	<li> ♥ </li>
 	<li class="oak">~</li>
+</ul>
+</div>
+
+<div title="Атрибуты">
+<p> ~ </p>
+<p title="heart"> ♥ </p>
+<p> ~ </p>
+</div>
+
+<div title="Первый">
+<ul>
+	<li> ♥ </li>
+	<li> ~ </li>
+	<li> ~ </li>
+</ul>
+</div>
+
+<div title="Последний">
+<ul>
+	<li> ~ </li>
+	<li> ~ </li>
+	<li> ♥ </li>
 </ul>
 </div>
 

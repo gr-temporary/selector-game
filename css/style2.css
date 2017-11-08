@@ -1,0 +1,28 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+main {
+	padding: 20px;
+}
+
+.excercise-block {
+	display: flex;
+}
+
+.excercise-block div {
+	flex: 0 0 50%;
+}
+
+.code-block {
+	padding-right: 10px;
+}
+
+.code-block > div {
+	margin-bottom: 10px;
+	padding: 10px;
+	border-radius: 5px;
+	background: #eee;
+}
